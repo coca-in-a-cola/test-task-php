@@ -13,9 +13,9 @@ $user = $_ENV['MySQL_DB_USER_NAME'] ? $_ENV['MySQL_DB_USER_NAME'] : 'mysql';
 $passwd = $_ENV['MySQL_DB_PASSWORD'] ? $_ENV['MySQL_DB_PASSWORD'] : 'password';
 $database = $_ENV['MySQL_DB_NAME'] ? $_ENV['MySQL_DB_NAME'] : 'USERS';
 
-/* Connection with MySQLi, OOP-style */
+/* Создаём подключение к БД */
 $mysqli = new mysqli($host, $user, $passwd, $database);
-/* Check if the connection succeeded */
+/* Проверим подключение */
 if (!is_null($mysqli->connect_error))
 {
    echo 'Connection failed<br>';
